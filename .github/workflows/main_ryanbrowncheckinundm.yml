@@ -22,7 +22,7 @@ jobs:
           node-version: '14.x'
 
       - name: npm install, build, and test
-        run:
+        run: |
           npm cache clean --force
           npm install --openssl-legacy-provider
           npm run build --if-present --openssl-legacy-provider
