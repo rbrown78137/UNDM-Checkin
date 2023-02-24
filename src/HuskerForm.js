@@ -48,6 +48,9 @@ function HuskerForm({activeStep, setActiveStep, isHuskerthon, setUserName, setAm
       error:false,
       errorMessage:'You must choose your job title'
     },
+    commitedCrime:{
+      value:false
+    },
     abuse:{
       value:false,
       error:false,
@@ -112,6 +115,11 @@ function HuskerForm({activeStep, setActiveStep, isHuskerthon, setUserName, setAm
       }
       else if (index === 5){
         if(currentValue === false){
+          crimeFlag = true
+        }
+      }
+      else if(index == 6){
+        if(currentValue === true){
           crimeFlag = true
         }
       }
@@ -256,14 +264,14 @@ function HuskerForm({activeStep, setActiveStep, isHuskerthon, setUserName, setAm
             Have you been convicted of any of the following crimes:
         </Typography>
         <FormGroup>
-            <FormControlLabel control={<Checkbox />} label="Felony assault, including domestic violence related incidents" />
-            <FormControlLabel control={<Checkbox />} label="Child abuse, molestation or other crime involving endangerment of a minor" />
-            <FormControlLabel control={<Checkbox />} label="Murder" />
-            <FormControlLabel control={<Checkbox />} label="Kidnapping" />
-            <FormControlLabel control={<Checkbox />} label="Misdemeanor assault" />
-            <FormControlLabel control={<Checkbox />} label="Drug distribution activity" />
-            <FormControlLabel control={<Checkbox />} label="Felony drug possession" />
-            <FormControlLabel control={<Checkbox />} label="Any other felony or crime involving moral turpitude" />
+            <FormControlLabel control={<Checkbox />} name="commitedCrime" onChange={handleCheck} label="Felony assault, including domestic violence related incidents" />
+            <FormControlLabel control={<Checkbox />} name="commitedCrime" onChange={handleCheck} label="Child abuse, molestation or other crime involving endangerment of a minor" />
+            <FormControlLabel control={<Checkbox />} name="commitedCrime" onChange={handleCheck} label="Murder" />
+            <FormControlLabel control={<Checkbox />} name="commitedCrime" onChange={handleCheck} label="Kidnapping" />
+            <FormControlLabel control={<Checkbox />} name="commitedCrime" onChange={handleCheck} label="Misdemeanor assault" />
+            <FormControlLabel control={<Checkbox />} name="commitedCrime" onChange={handleCheck} label="Drug distribution activity" />
+            <FormControlLabel control={<Checkbox />} name="commitedCrime" onChange={handleCheck} label="Felony drug possession" />
+            <FormControlLabel control={<Checkbox />} name="commitedCrime" onChange={handleCheck} label="Any other felony or crime involving moral turpitude" />
         </FormGroup>
         <FormControlLabel
             required
