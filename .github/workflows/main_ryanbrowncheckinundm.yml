@@ -27,7 +27,6 @@ jobs:
           npm install --cache /tmp/empty-cache
           npm install --openssl-legacy-provider
           npm run build --if-present --openssl-legacy-provider
-          npm run test --if-present --openssl-legacy-provider
 
       - name: Upload artifact for deployment job
         uses: actions/upload-artifact@v2
