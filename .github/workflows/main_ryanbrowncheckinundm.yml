@@ -23,7 +23,7 @@ jobs:
 
       - name: npm install, build, and test
         run: |
-          npm cache clean
+          npm install --cache /tmp/empty-cache
           npm install --openssl-legacy-provider
           npm run build --if-present --openssl-legacy-provider
           npm run test --if-present --openssl-legacy-provider
