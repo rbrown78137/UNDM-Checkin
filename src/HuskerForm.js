@@ -84,7 +84,6 @@ function HuskerForm({activeStep, setActiveStep, isHuskerthon, setUserName, setAm
     let crimeFlag = false
     for (let index = 0; index < formFields.length; index++) {
       const currentField = formFields[index];
-      const currentValue = formValues[currentField].value;
 
       newFormValues = {
         ...newFormValues,
@@ -116,7 +115,7 @@ function HuskerForm({activeStep, setActiveStep, isHuskerthon, setUserName, setAm
           crimeFlag = true
         }
       }
-      else if(index == 6){
+      else if(index === 6){
         if(currentValue === true){
           crimeFlag = true
         }
