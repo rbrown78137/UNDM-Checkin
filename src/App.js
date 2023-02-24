@@ -1,14 +1,12 @@
 import * as React from 'react';
 import CssBaseline from '@mui/material/CssBaseline';
 import AppBar from '@mui/material/AppBar';
-import Box from '@mui/material/Box';
 import Container from '@mui/material/Container';
 import Toolbar from '@mui/material/Toolbar';
 import Paper from '@mui/material/Paper';
 import Stepper from '@mui/material/Stepper';
 import Step from '@mui/material/Step';
 import StepLabel from '@mui/material/StepLabel';
-import Button from '@mui/material/Button';
 import Link from '@mui/material/Link';
 import Typography from '@mui/material/Typography';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
@@ -38,7 +36,7 @@ function getStepContent(activeStep, setActiveStep, isHuskerthon, setisHuskerthon
       console.log(activeStep)
       return <IntroForm activeStep={activeStep} setActiveStep={setActiveStep} setisHuskerthon={setisHuskerthon}/>;
     case 1:
-      return <HuskerForm activeStep={activeStep} setActiveStep={setActiveStep} isHuskerthon={isHuskerthon} setUserName={setUserName} setAmountRaised={setAmountRaised} setShirtSize={setShirtSize} finalScreenStep={finalScreenStep} setFinalScreenStep={setFinalScreenStep}  dinnerGroup={dinnerGroup} setDinnerGroup={setDinnerGroup}/>;
+      return <HuskerForm activeStep={activeStep} setActiveStep={setActiveStep} isHuskerthon={isHuskerthon} setUserName={setUserName} setAmountRaised={setAmountRaised} setShirtSize={setShirtSize} setFinalScreenStep={setFinalScreenStep} setDinnerGroup={setDinnerGroup}/>;
     case 2:
       return <FinalScreen activeStep={activeStep} setActiveStep={setActiveStep} finalScreenStep={finalScreenStep} userName={userName} amountRaised={amountRaised} shirtSize={shirtSize} dinnerGroup={dinnerGroup} setDinnerGroup={setDinnerGroup}/>;
     default:

@@ -11,10 +11,8 @@ import { LocalizationProvider } from '@mui/x-date-pickers/LocalizationProvider';
 import { DatePicker } from '@mui/x-date-pickers/DatePicker';
 import Button from '@mui/material/Button';
 import Box from '@mui/material/Box';
-import FormControl from '@mui/material/FormControl';
 
-
-function HuskerForm({activeStep, setActiveStep, isHuskerthon, setUserName, setAmountRaised, setShirtSize,finalScreenStep, setFinalScreenStep, dinnerGroup, setDinnerGroup}) {
+function HuskerForm({activeStep, setActiveStep, isHuskerthon, setUserName, setAmountRaised, setShirtSize, setFinalScreenStep, setDinnerGroup}) {
   const [btnDisabled, setBtnDisabled] = React.useState(false)
   const [date, setDate] = React.useState();
   const [formValues, setFormValues] = React.useState({

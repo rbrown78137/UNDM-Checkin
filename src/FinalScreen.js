@@ -4,7 +4,7 @@ import Button from '@mui/material/Button';
 const FinalScreen = ({activeStep, setActiveStep, finalScreenStep, userName, amountRaised, shirtSize, dinnerGroup}) => {
     return (
       <div>
-      {finalScreenStep == 1 && dinnerGroup>0?
+      {finalScreenStep === 1 && dinnerGroup>0?
         (
           <React.Fragment>
               <Typography variant="h5" gutterBottom>
@@ -28,7 +28,7 @@ const FinalScreen = ({activeStep, setActiveStep, finalScreenStep, userName, amou
               </Typography>
             </React.Fragment>):(<React.Fragment></React.Fragment>)
       }
-      {finalScreenStep == 1 && dinnerGroup<1?
+      {finalScreenStep === 1 && dinnerGroup<1?
         (
           <React.Fragment>
               <Typography variant="h5" gutterBottom color="red">
@@ -39,7 +39,7 @@ const FinalScreen = ({activeStep, setActiveStep, finalScreenStep, userName, amou
               </Typography> */}
             </React.Fragment>):(<React.Fragment></React.Fragment>)
       }
-       {finalScreenStep == 2?
+       {finalScreenStep === 2?
         (<React.Fragment>
         <Typography variant="h6" gutterBottom mt={3}>
         Please see a Huskerthon representative for directions on how to donate admissions fee on Donor Drive. Your attendance has been succesfully recorded.
@@ -52,7 +52,7 @@ const FinalScreen = ({activeStep, setActiveStep, finalScreenStep, userName, amou
       </React.Fragment>
       )
       }
-       {finalScreenStep == 3?
+       {finalScreenStep === 3?
         (<React.Fragment>
         <Typography variant="h6" gutterBottom mt={3} color="red">
           Please see a Huskerthon representative. There was an error with your submission.
